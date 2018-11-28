@@ -15,16 +15,34 @@ def fibonacci(n):
         return(fib[-1])
     elif n <=2:
         print(fib[n-1])
+        return(fib[n-1])
 
 
 def lucas(n):
+    luc = [2, 1]
     #DOC: A FUNCTION THAT RETURNS THE nth VALUE OF THE LUCAS NUMBERS
-    print('we did lucas')
+    if n > 2:
+        for what in range(3, n+1):
+            luc.append(luc[-1]+luc[-2])
+        print(luc[-1])
+        return(luc[-1])
+    elif n <=2:
+        print(luc[n-1])
+        return(luc[n-1])
 
 
-def sum_series():
+def sum_series(n, a = 0, b = 1):
+    sum = [a, b]
     #DOC: USING THE SAME LOGICS AS FIBONACCI AND LUCAS, A FUNCTION THAT RETURNS THE nth VALUE OF THE SUM_SERIES
-    pass
+    # 0, 1, 1, 2, 3, 5, 8, 13, 21
+    if n > 2:
+        for what in range(3, n+1):
+            sum.append(sum[-1]+sum[-2])
+        print(sum[-1])
+        return(sum[-1])
+    elif n <=2:
+        print(sum[n-1])
+        return(sum[n-1])
 
 
 def test():
