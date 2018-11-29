@@ -1,68 +1,68 @@
-import sys
+"""This module to design fibonacci, lucas and sum_series functions."""
 status = True
 
-# THIS IS THE FABONACCI SERIES:
+
 # 0, 1, 1, 2, 3, 5, 8, ETC.
-
-
 def fibonacci(n):
+    """TO RETURNS THE nth VALUE OF THE FABONACCI SERIES."""
     fib = [0, 1]
-    #DOC: A FUNCTION THAT RETURNS THE nth VALUE OF THE FABONACCI SERIES
-    if n <= 0:
-        print('The number has to be greater than 0.')
-        return('The number has to be greater than 0.')
+    if n < 0:
+        print('The number cannot be negative.')
+        return('The number cannot be negative.')
     elif n > 999:
         print('The number is too big.')
         return('The number is too big.')
-    elif n <=2:
-        print(fib[n-1])
-        return(fib[n-1])
-    elif n > 2:
-        for what in range(3, n+1):
+    elif n < 2:
+        print(fib[n])
+        return(fib[n])
+    elif n >= 2:
+        for what in range(2, n+1):
             fib.append(fib[-1]+fib[-2])
         print(fib[-1])
         return(fib[-1])
 
+
 def lucas(n):
+    """TO RETURNS THE nth VALUE OF THE LUCAS NUMBERS."""
     luc = [2, 1]
-    #DOC: A FUNCTION THAT RETURNS THE nth VALUE OF THE LUCAS NUMBERS
-    if n <= 0:
-        print('The number has to be greater than 0.')
-        return('The number has to be greater than 0.')
+    if n < 0:
+        print('The number cannot be negative.')
+        return('The number cannot be negative.')
     elif n > 999:
         print('The number is too big.')
         return('The number is too big.')
-    elif n <=2:
-        print(luc[n-1])
-        return(luc[n-1])
-    elif n > 2:
-        for what in range(3, n+1):
+    elif n < 2:
+        print(luc[n])
+        return(luc[n])
+    elif n >= 2:
+        for what in range(2, n+1):
             luc.append(luc[-1]+luc[-2])
         print(luc[-1])
         return(luc[-1])
 
 
-def sum_series(n, a = 0, b = 1):
-    sum = [a, b]
-    #DOC: USING THE SAME LOGICS AS FIBONACCI AND LUCAS, A FUNCTION THAT RETURNS THE nth VALUE OF THE SUM_SERIES
+def sum_series(n, a=0, b=1):
+    """TO RETURNS THE nth VALUE OF THE SUM_SERIES."""
     # 0, 1, 1, 2, 3, 5, 8, 13, 21
-    if n <= 0:
-        print('The number has to be greater than 0.')
-        return('The number has to be greater than 0.')
+    sum = [a, b]
+    if n < 0:
+        print('The number cannot be negative.')
+        return('The number cannot be negative.')
     elif n > 999:
         print('The number is too big.')
         return('The number is too big.')
-    elif n <=2:
-        print(sum[n-1])
-        return(sum[n-1])
-    elif n > 2:
-        for what in range(3, n+1):
+    elif n < 2:
+        print(sum[n])
+        return(sum[n])
+    elif n >= 2:
+        for what in range(2, n+1):
             sum.append(sum[-1]+sum[-2])
         print(sum[-1])
         return(sum[-1])
 
 
 def question():
+    """To prompt the question and save user's input."""
     print('Please enter your function and input.')
     user_input = input()
     if user_input == 'quit':
@@ -72,7 +72,6 @@ def question():
 
 
 if __name__ == "__main__":
-    #THIS IS TO SUMMARIZE WHAT THE PROGRAM DOES
     print('''
     This module defines functions that implement mathematical series.
 
@@ -91,5 +90,3 @@ if __name__ == "__main__":
 
     while status is True:
         question()
-
-
