@@ -7,8 +7,8 @@ def fibonacci(n):
     """TO RETURNS THE nth VALUE OF THE FABONACCI SERIES."""
     fib = [0, 1]
     if n < 0:
-        print('The number has to be greater than 0.')
-        return('The number has to be greater than 0.')
+        print('The number cannot be negative.')
+        return('The number cannot be negative.')
     elif n > 999:
         print('The number is too big.')
         return('The number is too big.')
@@ -26,8 +26,8 @@ def lucas(n):
     """TO RETURNS THE nth VALUE OF THE LUCAS NUMBERS."""
     luc = [2, 1]
     if n < 0:
-        print('The number has to be greater than 0.')
-        return('The number has to be greater than 0.')
+        print('The number cannot be negative.')
+        return('The number cannot be negative.')
     elif n > 999:
         print('The number is too big.')
         return('The number is too big.')
@@ -46,8 +46,8 @@ def sum_series(n, a=0, b=1):
     # 0, 1, 1, 2, 3, 5, 8, 13, 21
     sum = [a, b]
     if n < 0:
-        print('The number has to be greater than 0.')
-        return('The number has to be greater than 0.')
+        print('The number cannot be negative.')
+        return('The number cannot be negative.')
     elif n > 999:
         print('The number is too big.')
         return('The number is too big.')

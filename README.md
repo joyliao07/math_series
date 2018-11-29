@@ -1,24 +1,35 @@
-## math_series
+# MATH_SERIES
+
+
 401python lab02
+
 
 Author: Joyce Liao
 Version: 1.0.0
 
-#overview
-We will write three functions that produce math serieses
 
-#getting started
-read the instruction on canvas and follow the steps
-
-#architecture
-we will write a function that produces fibonacci series
-we will write a function that produces lucas numbers
-we will write a function that produces sum_series
-
-#API
+## OVERVIEW
+We will write three functions that produce math serieses.
 
 
-#change log
+## GETTING STARTED
+With proper python installation, the user should be able to start the program by calling "python math_series.py" in the terminal.
+
+
+## ARCHITECTURE
+We will write a function that produces fibonacci series
+We will write a function that produces lucas numbers
+We will write a function that produces sum_series
+
+
+## API
+
+
+
+
+## CHANGE-LOG
+
+
 
 
 2018-11-27 Repo is created
