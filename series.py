@@ -67,8 +67,10 @@ def question():
     user_input = input()
     if user_input == 'quit':
         exit()
-    else:
+    try:
         eval(user_input)
+    except :
+        print('please enter a valid input')
 
 
 if __name__ == "__main__":
