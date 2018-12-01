@@ -10,8 +10,8 @@ def fibonacci(n):
         print('The number cannot be negative.')
         return('The number cannot be negative.')
     elif n > 999:
-        print('The number is too big.')
-        return('The number is too big.')
+        print('The number is too big. Please enter a number between 0 and 999.')
+        return('The number is too big. Please enter a number between 0 and 999.')
     elif n < 2:
         print(fib[n])
         return(fib[n])
@@ -29,8 +29,8 @@ def lucas(n):
         print('The number cannot be negative.')
         return('The number cannot be negative.')
     elif n > 999:
-        print('The number is too big.')
-        return('The number is too big.')
+        print('The number is too big. Please enter a number between 0 and 999.')
+        return('The number is too big. Please enter a number between 0 and 999.')
     elif n < 2:
         print(luc[n])
         return(luc[n])
@@ -49,8 +49,8 @@ def sum_series(n, a=0, b=1):
         print('The number cannot be negative.')
         return('The number cannot be negative.')
     elif n > 999:
-        print('The number is too big.')
-        return('The number is too big.')
+        print('The number is too big. Please enter a number between 0 and 999.')
+        return('The number is too big. Please enter a number between 0 and 999.')
     elif n < 2:
         print(sum[n])
         return(sum[n])
@@ -65,10 +65,17 @@ def question():
     """To prompt the question and save user's input."""
     print('Please enter your function and input.')
     user_input = input()
+    return user_input
+
+
+def result(user_input):
+    """To output result to the user."""
     if user_input == 'quit':
         exit()
-    else:
+    try:
         eval(user_input)
+    except:
+        print('Please enter a valid input. For example, "fibonacci(n)", "lucas(n)", or "sum_series(n)".')
 
 
 if __name__ == "__main__":
@@ -86,7 +93,6 @@ if __name__ == "__main__":
 
     To quit the program at any time, enter "quit"
     ''')
-    user_input = '' #THIS VARIABLE ASSIGNMENT IS REQUIRED
-
     while status is True:
-        question()
+        user_input = question()
+        result(user_input)
