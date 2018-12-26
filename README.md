@@ -1,11 +1,10 @@
 # MATH_SERIES
 
 
-401python lab02
-
-
 Author: Joyce Liao
 Version: 1.0.0
+
+
 
 
 ## OVERVIEW
